@@ -1,0 +1,13 @@
+{% extends "Activitylog/base.html" %}
+{% block content %}
+
+<div class="alert alert-success" style="margin-top: 6%" role="alert">
+ Activity is added successfully!
+</div>
+  <div class="content-section">
+  	<a type="button" class="btn btn-primary" href="{% url 'view-activity' %}">View Current Activities</a>
+  	<a type="button" class="btn btn-warning" href="{% url 'add-activity' %}">Wanna add more activities?</a>
+  </div>
+
+
+{% endblock content %}

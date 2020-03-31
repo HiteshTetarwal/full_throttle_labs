@@ -1,0 +1,29 @@
+{% extends "Activitylog/base.html" %}
+{% block content %}
+<div class="col-md-10" style="margin-top: 20%;">
+  	<a type="button" class="btn btn-primary col-md-offset-4" href="{% url 'activity-home' %}"><-</a>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">User ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Location</th>
+      <th scope="col" style="column-width: 50px">Start Date</th>
+      <th scope="col">Start Date</th>
+    </tr>
+  </thead>
+  <tbody>
+	{% for r in activities %}
+		<tr>
+			<td>{{r.user.user_id}}</td>
+			<td>{{r.user.user_name}}</td>
+			<td>{{r.user.user_location}}</td>
+			<td>{{r.start_date}}</td>
+			<td>{{r.end_date}}</td>
+		</tr>
+	{% endfor %}
+  </tbody>
+</table>
+</div>
+
+{% endblock content %}

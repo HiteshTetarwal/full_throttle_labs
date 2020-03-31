@@ -1,0 +1,17 @@
+{% extends "Activitylog/base.html" %}
+{% block content %}
+<div class="col-md-4" style="margin-top: 20%">
+  <div class="content-section">
+  	<a type="button" class="btn btn-primary" href="{% url 'view-activity' %}">View Activities</a>
+  	<a type="button" class="btn btn-warning" href="{% url 'add-activity' %}">Update Activities</a>
+  </div>
+</div>
+<div class="row">
+<div class="col-md-8" style="margin-top: 5%;">
+  <h4>This module saves the activities on the backend. 
+  	<br>Custom management commands to save the activities:   "python manage.py saveactivities"
+  	<br>to views all the user and activity details:   "python manage.py viewactivities"</h4>
+</div>
+</div>
+
+{% endblock content %}
